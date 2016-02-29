@@ -16,4 +16,4 @@ Will refill this section as I go.
 
 If you haven't heard of this term, [this wikipedia article](https://en.wikipedia.org/wiki/Slug_(publishing)) does a good job at describing its origin. Slug, in our use case, is a way to ensure that the unique URLs generated for each post is both human readable and insightful with respect to its contents.
 
-While there are multiple ways to slug it, I've decided to 
+While there are multiple ways to slug it, I've decided to slug with dates and post subjects.

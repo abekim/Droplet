@@ -1,6 +1,6 @@
 import os
 from flask.ext.script import Manager
-from taskmanager import app
+from blogger import app
 
 manager = Manager(app)
 

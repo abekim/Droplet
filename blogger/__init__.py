@@ -7,6 +7,7 @@ Initialize an instance of a blogger app and serve it up
 """
 
 from flask import Flask, jsonify, request
+from flask.ext.cache import Cache
 from flask.ext.mongoengine import MongoEngine
 from blogger.json_encoder import MongoEngineJSONEncoder
 

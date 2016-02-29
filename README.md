@@ -6,11 +6,60 @@ The application is named such with the mental model that every post would repres
 
 ### Setup
 
-Will refill this section as I go.
+1. First, you need to clone the repo
+
+    ```bash
+    $ git clone git@github.com:abekim/droplet.git
+    $ cd droplet
+    ```
+
+2. Download `pip` and `virtualenv`
+
+    ```bash
+    $ sudo easy_install pip 
+    $ sudo sudo pip install virtualenv
+    ```
+
+3. Optionally, install `foreman` Ruby gem
+
+    ```bash
+    $ sudo gem install foreman
+    ```
+
+4. Optionally, you can setup an isolated environment using `virtualenv`
+
+    ```bash
+    $ virtualenv --no-site-packages env 
+    $ source env/bin/activate
+    ```
+
+5. Install system dependencies. You may need to include `sudo` at the front of the command if on Linux
+
+    ```bash
+    $ pip install -r requirements.txt
+    ```
+
+6. Run the application locally
+
+    If you've installed `foreman` earlier,
+
+    ```bash
+    $ foreman start
+    ```
+
+    Otherwise,
+
+    ```bash
+    $ python manage.py run
+    ```
 
 ### Future Implementation
 
-- Nothing just yet! Haven't started.
+- Blog post interaction
+	- Get post
+	- Make a new post
+	- Update an existing post
+- User authentication
 
 ### Slugging
 

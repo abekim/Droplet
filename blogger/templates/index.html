@@ -1,0 +1,43 @@
+{# declare inheritance #}
+{% extends "layout.html" %}
+
+
+{% block title %}{{ title }}{% endblock %}
+
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+
+{% block content %}
+    <script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
+    <h1>Welcome to Droplet 1.0!</h1>
+    <table class="small-6 large-6" id="posts">
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Date</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for post in posts %}
+            <tr>
+                <td>{{ post.subject }}</td>
+                <td>{{ post.created }}</td>
+                <td>
+                    {% for comment in post.comments %}
+                    {{ loop.length }}
+                    {% endfor %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+
+{% block footer %}
+    {{ super() }}
+{% endblock %}

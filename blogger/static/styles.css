@@ -1,0 +1,46 @@
+html, body {
+    height: 100%;
+    font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif
+}
+
+body {
+    margin: 0;
+    background: rgb(8, 90, 120);
+    background: linear-gradient(top, #4293d6 0%,#001e96 100%);
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #DDD;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
+}
+
+h1 {
+    padding: 50px;
+}
+
+ol {
+    list-style: none;
+}
+
+#tasks {
+    max-height: 500px;
+    margin: auto;
+}
+
+label {
+    height: 100%;
+}
+
+.description {
+    margin: 0px !important;
+}
+
+#footer {
+    padding-top: 40px;
+    color: #DDD;
+}

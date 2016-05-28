@@ -1,3 +1,6 @@
+/*
+ * Javascript for new post creation page
+ */
 $(function () {
     $(".button#create").click(function() {
         // Submit post to DB

@@ -5,39 +5,38 @@
 {% block title %}{{ title }}{% endblock %}
 
 
-{% block head %}
-    {{ super() }}
+{% block dependencies %}
 {% endblock %}
 
+{% block leftnav %}
+    <div></div>
+{% endblock %}
 
 {% block content %}
     <script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
+
+
     <h1>Welcome to Droplet 1.0!</h1>
-    <table class="small-6 large-6" id="posts">
-        <thead>
-            <tr>
-                <th>Subject</th>
-                <th>Date</th>
-                <th>Comments</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for post in posts %}
-            <tr>
-                <td>{{ post.subject }}</td>
-                <td>{{ post.created }}</td>
-                <td>
-                    {% for comment in post.comments %}
-                    {{ loop.length }}
-                    {% endfor %}
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-{% endblock %}
-
-
-{% block footer %}
-    {{ super() }}
+    <div class="table" id="posts">
+        <!-- It seems what we need is something more specific than is defined -->
+        {% if posts is defined %}
+            <div class="header">
+                <div class="column">Subject</div>
+                <div class="column">Date</div>
+                <div class="column">Snippet</div>
+            </div>
+            <div class="body">
+                {% for post in posts %}
+                <div class="row">
+                    <div class="column">{{ post.subject }}</div>
+                    <div class="column">{{ post.created }}</div>
+                    <div class="column">
+                        {% for comment in post.comments %}
+                        {{ loop.length }}
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
 {% endblock %}

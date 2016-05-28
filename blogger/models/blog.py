@@ -12,7 +12,7 @@ class Post(db.Document):
     Post model
     """
     # Schema
-    author = db.ReferenceField(User, required=True)
+    author = db.StringField(required=True)
     body = db.StringField(required=True)
     comments = db.ListField(db.EmbeddedDocumentField('Comment'))  # List of references
     created = db.DateTimeField(default=datetime.datetime.now, required=True)

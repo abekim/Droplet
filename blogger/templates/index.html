@@ -17,26 +17,37 @@
 
 
     <h1>Welcome to Droplet 1.0!</h1>
+
+    <div class="notification">
+        {% if new_post_success %}
+            <div>New post added successfully!</div>
+        {% endif %}
+    </div>
+
+    <div>
+        <button onclick="window.location.href='/blog/new';">Create New Post</button>
+    </div>
+
     <div class="table" id="posts">
-        <!-- It seems what we need is something more specific than is defined -->
-        {% if posts is defined %}
-            <div class="header">
-                <div class="column">Subject</div>
-                <div class="column">Date</div>
-                <div class="column">Snippet</div>
-            </div>
-            <div class="body">
-                {% for post in posts %}
+        <div class="header">
+            <div class="column">Subject</div>
+            <div class="column">Date</div>
+            <div class="column">Snippet</div>
+        </div>
+        <div class="body">
+            {% for post in posts %}
                 <div class="row">
                     <div class="column">{{ post.subject }}</div>
                     <div class="column">{{ post.created }}</div>
                     <div class="column">
                         {% for comment in post.comments %}
-                        {{ loop.length }}
+                            {{ loop.length }}
                         {% endfor %}
                     </div>
-                {% endfor %}
-            </div>
-        {% endif %}
+                </div>
+            {% else %}
+                <div class="row">No posts here! Click the button above to add a new post</div>
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}

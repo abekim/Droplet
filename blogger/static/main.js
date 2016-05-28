@@ -7,6 +7,7 @@ $(function () {
             author : 'abekim'
         })
         .done(function(data) {
+            window.location.href = "/?" + encodeURIComponent("new_post_success") + "=" + encodeURIComponent("1");
         })
         .fail(function(data) {
         })

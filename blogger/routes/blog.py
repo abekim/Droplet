@@ -36,8 +36,6 @@ def post_blog():
         body = post["body"]
         subject = post["subject"]
 
-        app.logger.info(author)
-
         # Remove later
         post_randnum = random.randint(1, 1000000)
         if (body is None):
@@ -56,4 +54,4 @@ def post_blog():
         post.save()
         data = post
 
-        return jsonify({"response":1})
+        return jsonify({ "response": 1 })

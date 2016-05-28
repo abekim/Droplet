@@ -6,12 +6,14 @@
 
 from blogger import db, utils
 import datetime
+from user import User
 
 class Post(db.Document):
     """
     Post model
     """
     # Schema
+    # author = db.ReferenceField(User, required=True)
     author = db.StringField(required=True)
     body = db.StringField(required=True)
     comments = db.ListField(db.EmbeddedDocumentField('Comment'))  # List of references

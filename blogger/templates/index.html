@@ -13,19 +13,17 @@
 {% endblock %}
 
 {% block content %}
-    <script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
-
-
     <h1>Welcome to Droplet 1.0!</h1>
 
     <div class="notification">
         {% if new_post_success %}
-            <div>New post added successfully!</div>
+            <div class="success callout" data-closable="slide-out-right">New post added successfully!</div>
         {% endif %}
     </div>
 
+
     <div>
-        <button onclick="window.location.href='/blog/new';">Create New Post</button>
+        <button class="button" onclick="window.location.href='/blog/new';">Create New Post</button>
     </div>
 
     <div class="table" id="posts">

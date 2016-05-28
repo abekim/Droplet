@@ -20,26 +20,32 @@ The application is named such with the mental model that every post would repres
     $ sudo sudo pip install virtualenv
     ```
 
-3. Optionally, install `foreman` Ruby gem
+3. Download and install `mongodb`
+
+    ```bash
+    $ brew install mongodb
+    ```
+
+4. Optionally, install `foreman` Ruby gem
 
     ```bash
     $ sudo gem install foreman
     ```
 
-4. Optionally, you can setup an isolated environment using `virtualenv`
+5. Optionally, you can setup an isolated environment using `virtualenv`
 
     ```bash
     $ virtualenv --no-site-packages env 
     $ source env/bin/activate
     ```
 
-5. Install system dependencies. You may need to include `sudo` at the front of the command if on Linux
+6. Install system dependencies. You may need to include `sudo` at the front of the command if on Linux
 
     ```bash
     $ pip install -r requirements.txt
     ```
 
-6. Run the application locally
+7. Run the application locally
 
     If you've installed `foreman` earlier,
 

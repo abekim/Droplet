@@ -5,8 +5,8 @@
 {% block title %}{{ title }}{% endblock %}
 
 
-{% block head %}
-    {{ super() }}
+{% block dependencies %}
+    <script src="{{ url_for('static', filename='js/newpost.js') }}" type="text/javascript"></script>
 {% endblock %}
 
 

@@ -6,6 +6,9 @@ The application is named such with the mental model that every post would repres
 
 ### Setup
 
+> - Include / mention adding SSH key or simply using HTTPS in the cloning process
+> - Include some instructions on setup / depoyment on Windows
+
 1. First, you need to clone the repo
 
     ```bash

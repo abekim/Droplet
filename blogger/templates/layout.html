@@ -19,10 +19,17 @@
     {% endblock %}
 </head>
 <body>
-    <div id="leftnav">{% block leftnav %}{% endblock %}</div>
-    <div id="content">{% block content %}{% endblock %}</div>
-    <div id="footer">
-        &copy; Copyright 2016 by @abekim.
+    <ul id="leftnav" class="side-nav sticky" data-sticky>
+        {% block leftnav %}{% endblock %}
+        <li class="active">item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+    </ul>
+    <div id="content" class="row">{% block content %}{% endblock %}</div>
+    <div id="footer" class="row footer">
+        &copy; Copyright 2016 by "foobar"
 
         {# Potentially more stuff to add to the footer? #}
         {% block footer %}

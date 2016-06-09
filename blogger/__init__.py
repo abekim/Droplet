@@ -9,18 +9,13 @@ Initialize an instance of a blogger app and serve it up
 from flask import Flask, jsonify, request
 from flask.ext.cache import Cache
 from flask.ext.mongoengine import MongoEngine
-from blogger.json_encoder import MongoEngineJSONEncoder
+from config import configure
 
 # Initialize app
-app = Flask(__name__)
+app = Flask(__name__, instance_relative_config=True)
+configure(app)
 
-# Configurations
-app.debug = True
-app.json_encoder = MongoEngineJSONEncoder
-
-app.config["MONGODB_SETTINGS"] = {
-    'DB': 'BlogWarehouse'
-}
+app.json_encoder = app.config["JSON_ENCODER"]
 
 if not app.debug:
     import logging

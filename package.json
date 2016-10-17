@@ -5,8 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node ./bin/www",
-    "test": "npm run lint",
-
+    "test": "npm run lint && mocha",
     "prestart": "$(npm get validate || true) || npm test",
     "lint": "npm run lint:pug && npm run lint:js",
     "lint:pug": "pug-lint views/*",
@@ -29,8 +28,10 @@
     "eslint-plugin-import": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1",
+    "mocha": "^3.1.2",
     "nodemon": "^1.11.0",
-    "pug-lint": "^2.3.0"
+    "pug-lint": "^2.3.0",
+    "supertest": "^2.0.0"
   },
   "repository": {
     "type": "git",

@@ -38,6 +38,12 @@ The application is named such with the mental model that every post would repres
     $ npm start
     ```
 
+5. Optionally, if you want to run npm test on every restart, add the `validate` `npm` config set to `false`:
+
+    ```bash
+    $ echo 'validate=false' > .npmrc
+    ```
+
 ### Future Implementation
 
 - Blog post interaction

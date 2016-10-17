@@ -1,0 +1,50 @@
+{
+  "name": "droplet",
+  "version": "0.0.0",
+  "description": "Blog application that allows a user to post any combination of any structural data (image, video, text, etc.)",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "npm run lint",
+
+    "prestart": "$(npm get validate || true) || npm test",
+    "lint": "npm run lint:pug && npm run lint:js",
+    "lint:pug": "pug-lint views/*",
+    "lint:js": "npm run lint:base && npm run lint:route",
+    "lint:base": "eslint *.js",
+    "lint:route": "eslint routes/*.js"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.13.4",
+    "morgan": "~1.7.0",
+    "pug": "^2.0.0-beta6",
+    "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.8.0",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
+    "nodemon": "^1.11.0",
+    "pug-lint": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abekim/droplet.git"
+  },
+  "keywords": [
+    "blog",
+    "droplet"
+  ],
+  "author": "abekim",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/abekim/droplet/issues"
+  },
+  "homepage": "https://github.com/abekim/droplet#readme",
+  "private": true
+}

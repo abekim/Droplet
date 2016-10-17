@@ -6,60 +6,36 @@ The application is named such with the mental model that every post would repres
 
 ### Setup
 
-> - Include / mention adding SSH key or simply using HTTPS in the cloning process
-> - Include some instructions on setup / depoyment on Windows
+1. Make sure you have Node.js and `npm` installed. Running the following two commands will verify that they are installed.
 
-1. First, you need to clone the repo
+    ```bash
+    $ node -v && npm -v
+    ```
+
+    If either is not installed, install the instructions for [installing Node.js](https://nodejs.org/en/download/package-manager/) (`npm` is included as a part of Node.js) and/or [installing npm](http://blog.npmjs.org/post/85484771375/how-to-install-npm)
+
+2. Next, you need to clone the repo.
 
     ```bash
     $ git clone git@github.com:abekim/droplet.git
-    $ cd droplet
     ```
 
-2. Download `pip` and `virtualenv`
+    If you have yet to add an SSH key for your GitHub account, you can either follow the [instructions by GitHub](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/) or clone the repository using HTTPS:
 
     ```bash
-    $ sudo easy_install pip 
-    $ sudo sudo pip install virtualenv
+    $ git clone https://github.com/abekim/droplet.git
     ```
 
-3. Download and install `mongodb`
+3. Enter the cloned directory and install local dependencies:
 
     ```bash
-    $ brew install mongodb
+    $ npm install
     ```
 
-4. Optionally, install `foreman` Ruby gem
+4. Start the server
 
     ```bash
-    $ sudo gem install foreman
-    ```
-
-5. Optionally, you can setup an isolated environment using `virtualenv`
-
-    ```bash
-    $ virtualenv --no-site-packages env 
-    $ source env/bin/activate
-    ```
-
-6. Install system dependencies. You may need to include `sudo` at the front of the command if on Linux
-
-    ```bash
-    $ pip install -r requirements.txt
-    ```
-
-7. Run the application locally
-
-    If you've installed `foreman` earlier,
-
-    ```bash
-    $ foreman start
-    ```
-
-    Otherwise,
-
-    ```bash
-    $ python manage.py run
+    $ npm start
     ```
 
 ### Future Implementation
@@ -69,6 +45,7 @@ The application is named such with the mental model that every post would repres
 	- Make a new post
 	- Update an existing post
 - User authentication
+    - Admin
 
 ### Slugging
 

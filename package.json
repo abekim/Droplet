@@ -42,7 +42,7 @@
     "droplet"
   ],
   "author": "abekim",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/abekim/droplet/issues"
   },

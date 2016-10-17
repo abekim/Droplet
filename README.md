@@ -1,6 +1,8 @@
 Droplet
 =======
 
+[![Build Status][image]][ci] ![license][mit_license]
+
 Droplet is a blog application that allows a user to post any combination of any structural data (image, video, text, etc.).
 The application is named such with the mental model that every post would represent "a droplet of your day"
 
@@ -58,3 +60,8 @@ The application is named such with the mental model that every post would repres
 If you haven't heard of this term, [this wikipedia article](https://en.wikipedia.org/wiki/Slug_(publishing)) does a good job at describing its origin. Slug, in our use case, is a way to ensure that the unique URLs generated for each post is both human readable and insightful with respect to its contents.
 
 While there are multiple ways to slug it, I've decided to slug with dates and post subjects.
+
+
+[image]: https://travis-ci.org/abekim/droplet.svg?branch=master "Build status"
+[ci]: https://travis-ci.org/abekim/droplet
+[mit_license]: https://img.shields.io/github/license/mashape/apistatus.svg "MIT"

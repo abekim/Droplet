@@ -1,7 +1,7 @@
 Droplet
 =======
 
-[![Build Status][image]][ci] ![license][mit_license]
+[![Build Status][image]][ci]
 
 Droplet is a blog application that allows a user to post any combination of any structural data (image, video, text, etc.).
 The application is named such with the mental model that every post would represent "a droplet of your day"
